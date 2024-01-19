@@ -1,5 +1,6 @@
 package com.lucy.springboot.domain.posts;
 
+import com.lucy.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @Getter // getter 모든 필드에 게더메소드 자동생성
 @NoArgsConstructor // 기본 생성자 자동 추가
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
